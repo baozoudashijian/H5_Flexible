@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"> -->
+    <script src="./lib-flex/flexible_css.debug.js"></script>
+    <script src="./lib-flex/flexible.debug.js"></script>
+    <title>移动端适配</title>
+</head>
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    [data-dpr="1"] body {
+        background: green;
+    }
+    [data-dpr="2"] body {
+        background: linear-gradient(185deg, #FF2900 0%, #FFB56B 100%);
+    }
+    [data-dpr="3"] body {
+        background: yellow;
+    }
+    .header img {
+        display: block;
+        width: 100%;
+        height: 6.1067rem;
+    }
+    .main {
+        padding: 0 .4rem;
+        margin: 0 auto;
+        height: 9.8133rem;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: .2133rem .24rem;
+        background-color: #FFF1DF;
+    }
+    .wrapper_2 {
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/border.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper_2 .title1 {
+        color: #D56700;
+        font-size: 46px;
+        line-height: .8533rem;
+        margin-top: .2933rem;
+        font-weight: 400;
+    }
+    .wrapper_2 .title2 {
+        color: #FF2121;
+        font-size: 74px;
+        line-height: 1.36rem;
+        font-weight: 600;
+    }
+    .wrapper_2 .title3 {
+        
+    }
+    .wrapper_2 .title3 .fee {
+        color: #D56700;
+        font-size: 36px;
+        line-height: .6667rem;
+        font-weight: 400;
+    }
+    .wrapper_2 .title3 .intime {
+        color: #D56700;
+        font-size: 24px;
+        line-height: .4533rem;
+        font-weight: 400;
+    }
+    .wrapper_2 .btn {
+        height: 1.12rem;
+        margin-top: .3733rem;
+    }
+    .wrapper_2 .btn {
+        height: 100%;
+    }
+    .wrapper_2 .separate {
+        height: .6667rem;
+        margin-top: .6667rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .wrapper_2 .separate .line {
+        width: 8.16rem;
+        background-color: #D56700;
+        height: .0267rem;
+    }
+    .wrapper_2 .separate .capsule {
+        width: 2.4rem;
+        height: .6667rem;
+        border: 2px solid #D56700;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 28px;
+        background-color: #FFF1DF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #D56700;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .wrapper_2 .time {
+        margin-top: .4rem;
+        color: #D56700;
+        font-size: 28px;
+        line-height: .8533rem;
+    }
+    .wrapper_2 .attention1, .wrapper_2 .attention2, .wrapper_2 .attention3 {
+        color: #D56700;
+        font-size: 28px;
+        margin-bottom: .1333rem;
+    }
+    .footer img {
+        display: block;
+        width: 100%;
+        height: 1.8667rem;
+    }
+</style>
+<body>
+    <div class="header">
+        <img src="./images/header.png" alt="">
+    </div>
+    <div class="main">
+        <div class="wrapper">
+            <div class="wrapper_2">
+                <div class="title1">[共得29700书币]</div>
+                <div class="title2">充199元送98元</div>
+                <div class="title3">
+                    <span class="fee">[另送10元优惠券]</span>
+                    <span class="intime">（7天内使用有效）</span>
+                </div>
+                <div class="btn">
+                    <img src="./images/btn.png" alt="">
+                </div>
+                <div class="separate">
+                    <div class="line"></div>
+                    <div class="capsule">活动规则</div>
+                </div>
+                <div class="time">2022年6月10日12:00-6月12日23:59</div>
+                <div class="attention1">1.此充值为书币充值</div>
+                <div class="attention2">2.书币为虚拟物品，不支持退货</div>
+                <div class="attention3">3.本次充值活动每人仅限参加2次</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="./images/footer.png" alt="">
+    </div>
+<script>
+    // lib-flexible的意思就是不用你去设置viewport, lib-flexible会自己去设置
+    // document.documentElement.getBoundClient().width和viewport缩放有关
+</script>
+</body>
+</html>
